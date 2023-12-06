@@ -10,7 +10,7 @@ def timer(func: Callable) -> Callable:
         start = perf_counter()
         res = func(*args, **kwargs)
         end = perf_counter()
-        return f"Result = {res}. Execution took {(end-start):.3f} ms."
+        return f"Result = {res}. Execution took {(end-start) * 1000:.2f} ms."
 
     return wrapper
 
